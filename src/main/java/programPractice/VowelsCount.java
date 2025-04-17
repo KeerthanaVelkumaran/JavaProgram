@@ -1,4 +1,4 @@
-package org.example;
+package programPractice;
 /**--Count the vowels in a string
 
 1. string can be anything like "i am a boy" or "Keerthana" or "this is the java programming .m/hd"
@@ -9,7 +9,7 @@ approach would be
 3. first for loop would be each char of the string and second for loop would be vowels array
 4. first i will take the charAt(0) of the string and compare it to the each char of Vowels array
 	**/
-public class javaExample {
+public class VowelsCount {
 	
 	static int count = 0;
 
@@ -21,9 +21,10 @@ public class javaExample {
 	}
 	
 	
-	public static int vowelsCount(String strString) {
+	public static int vowelsCount(String strString) // change the parameter name "strString"  -> it does not making sense
+	{
 		
-		char[] chVow = {'a','e','i','o','u'};
+		char[] chVow = {'a','e','i','o','u'}; //try to give the properFullName ->  like vowelCharacters or CharVowels
 		
 		 for(int i = 0; i<strString.length();i++){
 		 
