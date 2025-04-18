@@ -11,29 +11,34 @@ approach would be
 	**/
 public class VowelsCount {
 	
-	static int count = 0;
+	int count = 0;
 
 	public static void main(String[] args) {
-		String strInput = "i am joly - u";
-		int vowCount = vowelsCount(strInput);
+		VowelsCount vc = new VowelsCount();
+		String strInput = "#!#@#@$";
+		int vowCount = vc.vowelsCount(strInput);
 		System.out.println(vowCount+"---Count");
 
 	}
 	
 	
-	public static int vowelsCount(String strString) // change the parameter name "strString"  -> it does not making sense
+	public int vowelsCount(String strString) // change the parameter name "strString"  -> it does not making sense
 	{
-		
+		if(strString==null) 
+			return 0;
+		strString = strString.toLowerCase();
 		char[] chVow = {'a','e','i','o','u'}; //try to give the properFullName ->  like vowelCharacters or CharVowels
 		
 		 for(int i = 0; i<strString.length();i++){
-		 
-			for(int j = 0; j<chVow.length;j++){
-				
-				if(strString.charAt(i)==chVow[j]){
-					count = count+1;
-					break;
-				}
+			char currentChar = strString.charAt(i);
+			switch(currentChar){
+				case 'a':
+				case 'e':
+				case 'i':
+				case 'o':
+				case 'u':
+				count++;
+				break;
 			}
 		 
 		 }
